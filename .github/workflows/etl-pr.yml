@@ -1,0 +1,33 @@
+name: open-etl-pr
+
+on:
+  push:
+    branches:
+      - 'master'
+    paths:
+      - '**/source-file-**.txt'
+jobs:
+  pull-request:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Get changed files
+      id: changed-files
+      uses: tj-actions/changed-files@v35
+
+    - name: Create pull request
+      uses: mohit-s96/action-pull-request-another-repo@8412fe94bcc0be2c0624c32acc7477003772c5b5
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_files: ${{join(steps.changed-files.outputs.all_changed_files, ';')}}
+        source_folder: 'src/main/resources'
+        destination_repo: 'mohit-s96/test-repo-1'
+        destination_folder: 'lib/references'
+        destination_base_branch: 'main'
+        destination_head_branch: 'merge-this-asap'
+        user_email: 'mohitsrivastava67@gmail.com'
+        user_name: 'mohit-s96'
+        pull_request_reviewers: 'mohit-s96'

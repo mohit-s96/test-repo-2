@@ -18,7 +18,7 @@ jobs:
       uses: tj-actions/changed-files@v35
 
     - name: Create pull request
-      uses: mohit-s96/action-pull-request-another-repo@4baad68c6a3eca2747029bcb2f59acb8503390bb
+      uses: mohit-s96/action-pull-request-another-repo@de304dec4a89eef9e84d7cd7fb8385266a4db6ef
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:

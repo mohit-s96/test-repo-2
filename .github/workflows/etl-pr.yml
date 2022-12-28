@@ -18,7 +18,7 @@ jobs:
       uses: tj-actions/changed-files@v35
 
     - name: Create pull request
-      uses: mohit-s96/action-pull-request-another-repo@de304dec4a89eef9e84d7cd7fb8385266a4db6ef
+      uses: mohit-s96/action-pull-request-another-repo@c5adabf7f4105efcda5b5a4f5b8a400b08ce279f
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
@@ -31,3 +31,4 @@ jobs:
         user_email: 'mohitsrivastava67@gmail.com'
         user_name: 'mohit-s96'
         pull_request_reviewers: 'mohit-s96'
+        target_file_name: "target-file.txt"

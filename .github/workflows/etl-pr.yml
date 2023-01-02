@@ -28,7 +28,7 @@ jobs:
         source_folder: 'src/main/resources'
         destination_repo: 'mohit-s96/test-repo-1'
         destination_folder: 'lib/references'
-        destination_base_branch: 'main'
+        destination_base_branch: 'master'
         destination_head_branch: 'merge-this-asap'
         user_email: 'mohitsrivastava67@gmail.com'
         user_name: 'mohit-s96'

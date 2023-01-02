@@ -32,5 +32,5 @@ jobs:
         destination_head_branch: 'merge-this-asap'
         user_email: 'mohitsrivastava67@gmail.com'
         user_name: 'mohit-s96'
-        pull_request_reviewers: 'mohit-s96'
+        pull_request_reviewers: 'msx47'
         target_file_name: "target-file.txt"
